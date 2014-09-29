@@ -1,0 +1,15 @@
+<ion-view title="Friends">
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="tag in tags" type="item-text-wrap" href="#/tab/friend/{{friend.id}}">
+        {{tag}}
+      </ion-item>
+    </ion-list>
+
+    <ion-infinite-scroll
+      ng-if="!noMoreTags"
+      on-infinite="loadMore()"
+      distance="1%">
+    </ion-infinite-scroll>
+  </ion-content>
+</ion-view>
